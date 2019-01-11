@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Bootstrap 4-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <!--CSS-->
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <header class="bg-blue">
+    <nav class="navbar navbar-dark navbar-static-top bg-blue sidenav">
+      <h1 class="navbar-brand mb-0">e-Ventas</h1>
+    </nav>
+  </header>
+  <main class="d-md-flex">
+    <!--NAVIGATION PANEL-->
+    <aside class="sidebar p-0">
+      <section class="nav flex-column pt-3 sidebar">
+        <!--Sidebar user panel-->
+        <div class="nav-item d-flex pl-3 pb-2">
+          <img class="d-inline rounded-circle avatar" src="https://adminlte.io/themes/AdminLTE/dist/img/user2-160x160.jpg"
+            alt="user-image">
+          <div class="d-inline pl-3 info">
+            <p class="d-block text-light m-0">Alexander Pierce</p>
+            <p class="d-block text-light m-0">
+              <span class="d-inline-block mr-1"> <i class="fa fa-circle text-success"></i></span>
+              <span class="f-10">Online</span>
+            </p>
+          </div>
+        </div>
+        <!--Weather Widget-->
+        <div class="d-flex justify-content-center">
+          <div id="openweathermap-widget-23"></div>
+          <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 23, cityid: '3936456', appid: '5c50e23df9ec7615bd3d6babae7dd7ce', units: 'metric', containerid: 'openweathermap-widget-23', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();</script>
+        </div>
+        <!--Sidebar menu-->
+        <div class="nav-item pl-3 bg-black">
+          <span class="nav-link text-secondary f-12 pl-1">MAIN NAVIGATION</span>
+        </div>
+        <ul class="sidebar-menu">
+          <li class="nav-item pl-3 pt-1 pb-1 active bg-black2">
+            <a class="nav-link pl-0 f-14 text-light d-flex align-items-baseline justify-content-between" data-toggle="collapse"
+              href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <span><i class="fas fa-tachometer-alt pr-2"></i>Dashboard</span>
+              <i class="fas fa-angle-down"></i>
+            </a>
+          </li>
+          <li class="collapse" id="collapseExample">
+            <ul>
+              <li>
+                <a class="text-light f-14" href="#new-dashboard" id="view-one">Nuevo Dashboard
+                </a>
+              </li>
+              <li>
+                <a class="text-light f-14" href="#panel-dashboard" id="view-two">Ver Dashboards</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </aside>
+    <!--DASHBOARD STATISTICS-->
+    <!--VIEW FORM DATA (1)-->
+    <section class="container-fluid pl-3 pt-3" id="new-dashboard">
+      <!--Content header-->
+      <div class="d-flex align-items-baseline text-dark mb-3">
+        <h4>Dashboard</h4><small class="ml-2 text-secondary">Estadísticas</small>
+      </div>
+      <!--Main content-->
+      <div class="d-flex row justify-content-center">
+        <div class="col-12 col-lg-8 col-xl-6">
+          <div class="card mb-4 bg-white">
+            <h5 class="card-header p-3 font-weight-normal text-secondary bg-transparent"> Datos en Dashboard </h5>
+            <div class="card-body p-3 text-dark f-14">
+              <form>
+                <div class="form-group">
+                  <label class="font-weight-bold" for="new-purchases">Cantidad de nuevas compras</label>
+                  <input type="number" class="form-control form-control-sm rounded-0" id="new-purchases" placeholder="Nuevas compras">
+                </div>
+
+                <div class="form-group">
+                  <label class="font-weight-bold" for="purchase-percentage">Incremento de compras</label>
+                  <input type="number" class="form-control form-control-sm rounded-0" id="purchase-percentage"
+                    placeholder="% Incremento de compras">
+                </div>
+
+                <div class="form-group">
+                  <label class="font-weight-bold" for="new-users">Cantidad nuevos usuarios</label>
+                  <input type="number" class="form-control form-control-sm rounded-0" id="new-users" placeholder="Nuevos usuarios">
+                </div>
+                <div class="form-group">
+                  <label class="font-weight-bold" for="visitors">Cantidad nuevas visitas</label>
+                  <input type="number" class="form-control form-control-sm rounded-0" id="visitors" placeholder="Nuevas visitas">
+                </div>
+                <div class="form-group">
+                  <label class="font-weight-bold" for="date">Fecha de ingreso</label>
+                  <input type="date" class="form-control form-control-sm rounded-0" id="date">
+                </div>
+            </div>
+            <div class="card-footer p-3 bg-transparent text-right">
+              <button type="submit" class="btn text-light bg-blue">Ingresar Datos</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--VIEW PANEL DATA (2)-->
+    <section class="container-fluid pt-3 pl-3c right" id="panel-dashboard">
+      <!--Content header-->
+      <div class="d-flex align-items-baseline text-dark mb-3">
+        <h4>Dashboard</h4><small class="ml-2 text-secondary">Estadísticas</small>
+      </div>
+      <!--Main content-->
+      <div class="d-flex row">
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="card bg-info text-light rounded-0 border-0 mb-4">
+            <div class="card-body pr-3 pl-3 pt-2 pb-2">
+              <h2 class="font-weight-bold">150</h2>
+              <p class="card-text">Nuevas Compras</p>
+            </div>
+            <button class="card-footer btn border-0 text-light text-center p-1">
+              <small>Más info<i class="fa fa-arrow-circle-right ml-1"></i></small>
+            </button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="card bg-success text-light rounded-0 border-0 mb-4">
+            <div class="card-body pr-3 pl-3 pt-2 pb-2">
+              <h2 class="font-weight-bold d-flex align-items-end">53<span class="f-14 pb-3">%</span></h2>
+              <p class="card-text">Incremento de Compras</p>
+            </div>
+            <button class="card-footer btn border-0 text-light text-center p-1">
+              <small>Más info<i class="fa fa-arrow-circle-right ml-1"></i></small>
+            </button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="card bg-warning rounded-0 border-0 mb-4">
+            <div class="card-body text-light pr-3 pl-3 pt-2 pb-2">
+              <h2 class="font-weight-bold">44</h2>
+              <p class="card-text">Nuevos Usuarios</p>
+            </div>
+            <button class="card-footer btn border-0 text-light text-center p-1">
+              <small>Más info<i class="fa fa-arrow-circle-right ml-1"></i></small>
+            </button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="card bg-danger text-light rounded-0 border-0 mb-4">
+            <div class="card-body pr-3 pl-3 pt-2 pb-2">
+              <h2 class="font-weight-bold">65</h2>
+              <p class="card-text">Nuevas Visitas</p>
+            </div>
+            <button class="card-footer btn border-0 text-light text-center p-1">
+              <small>Más info<i class="fa fa-arrow-circle-right ml-1"></i></small>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--JS-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

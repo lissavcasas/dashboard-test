@@ -1,0 +1,129 @@
+body {
+  font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+  background-color: #ECF0F5;
+  min-height: 100vh;
+}
+
+/* HEADER */
+
+.bg-blue {
+  background-color: #3C8DBC;
+}
+
+.sidenav {
+  display: flex;
+  justify-content: center;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 100%;
+  background-color: #222D32;
+}
+
+/* User panel */
+
+.avatar {
+  height: 50px;
+}
+
+.info {
+  padding: 5px 5px 5px 15px;
+}
+
+.text-success {
+  font-size: 10px;
+}
+
+.f-10 {
+  font-size: 10px;
+}
+
+/* Menu */
+
+.bg-black {
+  background-color: #1a2226;
+}
+
+.f-12 {
+  font-size: 12px;
+}
+
+.sidebar-menu {
+  white-space: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-menu li.active {
+  border-left: 3px solid #3C8DBC;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+h4 {
+  font-family: 'Source Sans Pro',sans-serif;
+}
+
+.bg-black2 {
+  background-color: #1E282C;
+}
+
+.card-header {
+  border-top: 4px solid #3C8DBC;
+}
+
+.collapse>ul>li {
+  background-color: #2C3B41;
+}
+
+#panel-dashboard {
+  display:none;
+}
+
+/* CARDS */
+
+.card .card-body {
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-blend-mode: soft-light;
+}
+
+.card.bg-info .card-body {
+  background-image: url(https://static.wixstatic.com/media/438bf6_ba00d8867ac04b18a05c7ef5c564fb57~mv2_d_1600_1600_s_2.png);
+  background-color: #00C0EF;
+}
+
+.card.bg-success .card-body {
+  background-image: url(http://www.gaby-moreno.com/administrator/public_html/css/ionicons/png/512/stats-bars.png);
+  background-color: #00A65A;
+}
+
+.card.bg-warning .card-body {
+  background-image: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-add-512.png);
+  background-color: #F39C12;
+}
+
+.card.bg-danger .card-body {
+  background-image: url(https://png.pngtree.com/svg/20170712/app_pie_1192627.png);
+  background-color: #DD4B39;
+}
+
+@media (min-width: 768px) {
+
+  .sidebar {
+    min-height: 100vh;
+    width: 230px
+  }
+
+  .sidenav {
+    width: 230px;
+    background-color: #357CA5;
+  }
+
+}
