@@ -2,7 +2,7 @@
   "name": "dashboard-test",
   "version": "1.0.0",
   "description": "Reto: Maquetado sitio de ventas.",
-  "main": "src/js/main.js",
+  "main": "./src/js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

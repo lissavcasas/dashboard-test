@@ -85,6 +85,17 @@ h4 {
   display:none;
 }
 
+/* FORM */
+
+.alert {
+	text-align: center;
+	padding: 10px;
+	background: #3C8DBC;
+	color: #fff;
+	margin-bottom: 10px;
+	display: none;
+}
+
 /* CARDS */
 
 .card .card-body {

@@ -17,8 +17,8 @@
 </head>
 
 <body>
-  <header class="bg-blue">
-    <nav class="navbar navbar-dark navbar-static-top bg-blue sidenav">
+  <header class="bg-blue sticky-top">
+    <nav class="navbar navbar-dark bg-blue sidenav">
       <h1 class="navbar-brand mb-0">e-Ventas</h1>
     </nav>
   </header>
@@ -82,7 +82,8 @@
           <div class="card mb-4 bg-white">
             <h5 class="card-header p-3 font-weight-normal text-secondary bg-transparent"> Datos en Dashboard </h5>
             <div class="card-body p-3 text-dark f-14">
-              <form>
+              <div class="alert"> ¡Los datos fueron ingresados con éxito!</div>
+              <form id="new-register">
                 <div class="form-group">
                   <label class="font-weight-bold" for="new-purchases">Cantidad de nuevas compras</label>
                   <input type="number" class="form-control form-control-sm rounded-0" id="new-purchases" placeholder="Nuevas compras">
@@ -116,7 +117,7 @@
       </div>
     </section>
     <!--VIEW PANEL DATA (2)-->
-    <section class="container-fluid pt-3 pl-3c right" id="panel-dashboard">
+    <section class="container-fluid pt-3 pl-3" id="panel-dashboard">
       <!--Content header-->
       <div class="d-flex align-items-baseline text-dark mb-3">
         <h4>Dashboard</h4><small class="ml-2 text-secondary">Estadísticas</small>
@@ -170,6 +171,9 @@
       </div>
     </section>
   </main>
+   <!--Firebase-->
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
   <!--JS-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -178,6 +182,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <script src="./js/main.js"></script>
+  <script src="js/firebase.js"></script>
 </body>
 
 </html>
